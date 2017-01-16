@@ -13,3 +13,10 @@ app.use(function(req, res) {
 
 // Starts the server on port 3000
 app.listen(3000);
+
+
+// The Simplest Parameter that matches the requests coming into /users/1234 or /users/horse_ebooks
+app.get("/users:/userid",function(req, res) {
+    var userId = parseInt(req.params.userid, 10);
+    ...
+});
